@@ -1,0 +1,41 @@
+<div>
+    <h2>Registro de Usuario</h2>
+    <form [FormGroup]="registroForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="">Nombre:</label>
+            <input formControlName="name" type="text" placeholder="Nombre...">
+        </div>
+        <div>
+            <label for="">Email:</label>
+            <input formControlName="email" type="email" placeholder="Email...">
+        </div>
+        <div>
+            <label for="">Apellido:</label>
+            <input formControlName="lastName" type="text" placeholder="Apellido...">
+        </div>
+        <div>
+            <label for="">Domicilio:</label>
+            <input formControlName="domicile" type="text" placeholder="Domicilio...">
+        </div>
+        <div>
+            <label for="">Teléfono:</label>
+            <input formControlName="phone" type="text" placeholder="Teléfono...">
+        </div>
+        <div>
+            <label for="">Localidad:</label>
+            <input type="text" formControlName="locality" placeholder="Localidad...">
+        </div>
+        <div>
+            <label for="">Provincia:</label>
+            <input type="text" formControlName="province" placeholder="Provincia...">
+        </div>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <!-- Para ver los valores en tiempo real -->
+    <div class="debug">
+        <h3>Valores del formulario</h3>
+        <pre>{{ registroForm.value | json }}</pre>
+    </div>
+</div>
